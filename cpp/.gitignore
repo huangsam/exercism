@@ -4,4 +4,6 @@ CMakeCache.txt
 build/
 Makefile
 CMakeScripts/
+Debug/
 *.xcodeproj/
+*.build/
