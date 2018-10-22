@@ -17,15 +17,11 @@ bool is_isogram(const char phrase[])
         if (!isalnum(phrase[i])) {
             continue;
         }
-
         int c = (int) (tolower(phrase[i]) - 'a');
-        freq[c] += 1;
-    }
-
-    for (i = 0; i < 27; i++) {
-        if (freq[i] > 1) {
+        if (freq[c] == 1) {
             return false;
         }
+        freq[c] = 1;
     }
 
     return true;
