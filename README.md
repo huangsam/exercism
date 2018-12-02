@@ -10,3 +10,4 @@ The following languages have been used:
 - Golang
 - Java
 - PHP
+- Rust
