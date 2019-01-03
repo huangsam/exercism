@@ -9,5 +9,6 @@ The following languages have been used:
 - C#
 - Golang
 - Java
+- JavaScript
 - PHP
 - Rust
