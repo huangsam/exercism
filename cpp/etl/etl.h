@@ -17,11 +17,11 @@ namespace etl {
 
     map<char, int> transform(const map<int, vector<char>> old) {
         map<char, int> result;
-        for (auto it = old.cbegin(); it != old.cend(); it++) {
-            int points = it->first;
-            vector<char> chars = it->second;
-            for (auto sit = chars.cbegin(); sit != chars.cend(); sit++) {
-                result[tolower(*sit)] = points;
+        for (const auto& it : old) {
+            const int points = it.first;
+            const vector<char> chars = it.second;
+            for (const auto& sit : chars) {
+                result[tolower(sit)] = points;
             }
         }
         return result;
