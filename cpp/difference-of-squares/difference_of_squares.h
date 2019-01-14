@@ -1,3 +1,6 @@
+#ifndef DIFFERENCE_OF_SQUARES_H
+#define DIFFERENCE_OF_SQUARES_H
+
 namespace squares {
     int square_of_sum(int x) {
         int sum = x * (x + 1) / 2;
@@ -12,3 +15,5 @@ namespace squares {
         return square_of_sum(x) - sum_of_squares(x);
     }
 }
+
+#endif
