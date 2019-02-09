@@ -23,10 +23,20 @@ func neighbors(adjacencyList map[int][]int, current int) []int {
 
 // Build constructs a Node that represents a tree of records
 func Build(records []Record) (*Node, error) {
-	// Check that there are a valid amount of items
 	count := len(records)
+	rootCount := 0
+	for _, r := range records {
+		if r.ID == 0 {
+			rootCount += 1
+		}
+	}
+
 	if count == 0 {
 		return nil, nil
+	} else if rootCount == 0 {
+		return nil, errors.New("No root node exists")
+	} else if rootCount > 1 {
+		return nil, errors.New("Duplicate root nodes exist")
 	}
 
 	adjacencyList := make(map[int][]int)
@@ -34,39 +44,20 @@ func Build(records []Record) (*Node, error) {
 		adjacencyList[rec.Parent] = append(adjacencyList[rec.Parent], rec.ID)
 	}
 
-	// Check that the root node exists
-	rootCount := 0
-	for _, v := range adjacencyList[0] {
-		if v == 0 {
-			rootCount += 1
-		}
-	}
-
-	if rootCount == 0 {
-		return nil, errors.New("No root node exists")
-	} else if rootCount > 1 {
-		return nil, errors.New("Duplicate root nodes exist")
+	visited := make(map[int]bool)
+	for i := 0; i < len(records); i++ {
+		visited[i] = false
 	}
 
 	// Run BFS from root node to leaf nodes
 	result := &Node{ID: 0}
 	queue := []*Node{result}
-	visited := make(map[int]bool)
-	for i := 0; i < len(records); i++ {
-		visited[i] = false
-	}
 	var curNode *Node
 	var nxtNode *Node
 
 	for len(queue) > 0 {
 		curNode, queue = queue[0], queue[1:]
 
-		// Check whether a cycle exists
-		if val, ok := visited[curNode.ID]; ok && val {
-			return nil, errors.New("Cycle detected in graph")
-		}
-
-		// Check whether a higher identifier was found
 		for _, v := range neighbors(adjacencyList, curNode.ID) {
 			if v > curNode.ID {
 				nxtNode = &Node{ID: v}
@@ -82,7 +73,7 @@ func Build(records []Record) (*Node, error) {
 
 	for _, v := range visited {
 		if !v {
-			return nil, errors.New("The records are non-contiguous")
+			return nil, errors.New("At least one node was not visited")
 		}
 	}
 
