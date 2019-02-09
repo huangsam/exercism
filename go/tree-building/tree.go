@@ -24,22 +24,21 @@ func neighbors(adjacencyList map[int][]int, current int) []int {
 // Build constructs a Node that represents a tree of records
 func Build(records []Record) (*Node, error) {
 	count := len(records)
-	rootCount := 0
-	for _, r := range records {
-		if r.ID == 0 {
-			rootCount += 1
-		}
-	}
-
 	if count == 0 {
 		return nil, nil
-	} else if rootCount == 0 {
-		return nil, errors.New("No root node exists")
 	}
 
 	adjacencyList := make(map[int][]int)
+	noRoot := true
 	for _, rec := range records {
 		adjacencyList[rec.Parent] = append(adjacencyList[rec.Parent], rec.ID)
+		if rec.ID == 0 {
+			noRoot = false
+		}
+	}
+
+	if noRoot {
+		return nil, errors.New("No root node exists")
 	}
 
 	visited := make(map[int]bool)
