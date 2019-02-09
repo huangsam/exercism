@@ -5,11 +5,13 @@ import (
 	"sort"
 )
 
+// Record has identifiers of its parent and itself
 type Record struct {
 	ID     int
 	Parent int
 }
 
+// Node has identifier and children nodes
 type Node struct {
 	ID       int
 	Children []*Node
