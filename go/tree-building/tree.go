@@ -35,8 +35,6 @@ func Build(records []Record) (*Node, error) {
 		return nil, nil
 	} else if rootCount == 0 {
 		return nil, errors.New("No root node exists")
-	} else if rootCount > 1 {
-		return nil, errors.New("Duplicate root nodes exist")
 	}
 
 	adjacencyList := make(map[int][]int)
@@ -64,7 +62,7 @@ func Build(records []Record) (*Node, error) {
 				curNode.Children = append(curNode.Children, nxtNode)
 				queue = append(queue, nxtNode)
 			} else if v < curNode.ID {
-				return nil, errors.New("Higher ID is an invalid parent")
+				return nil, errors.New("Parent has higher ID than child")
 			}
 		}
 
