@@ -1,6 +1,6 @@
 package flatten
 
-// Flatten processes lists with integers and nested lists
+// Flatten processes lists with values and nested lists
 func Flatten(in interface{}) (out []interface{}) {
 	result := make([]interface{}, 0)
 
