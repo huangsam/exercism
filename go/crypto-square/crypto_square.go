@@ -2,14 +2,12 @@
 package cryptosquare
 
 import (
-	"math"
 	"strings"
 	"unicode"
 )
 
 type matrix [][]rune
 
-// Step 1: Normalize plaintext input
 func normalizeText(pt string) string {
 	var sb strings.Builder
 	for _, r := range pt {
@@ -20,28 +18,22 @@ func normalizeText(pt string) string {
 	return sb.String()
 }
 
-// Step 2: Get matrix rows and columns
-func getDimensions(nl int) (int, int) {
-	nsq := math.Sqrt(float64(nl))
-	r := int(math.Floor(nsq))
-	c := int(math.Ceil(nsq))
-
+func getSize(nl int) (r, c int) {
+	c = 1
 	for {
-		if r*c < nl {
-			r++
-		}
-		if r*c < nl {
-			c++
-		}
-		if r*c >= nl {
+		if c*c >= nl {
 			break
 		}
+		c++
 	}
-
-	return r, c
+	if c*(c-1) >= nl {
+		r = c - 1
+	} else {
+		r = c
+	}
+	return
 }
 
-// Step 3: Build matrix with normalized content
 func buildMatrix(nt string, r int, c int) matrix {
 	m := make(matrix, r)
 	for i := 0; i < r; i++ {
@@ -53,7 +45,6 @@ func buildMatrix(nt string, r int, c int) matrix {
 	return m
 }
 
-// Step 4: Build ciphertext output as result
 func buildResult(m matrix, r int, c int) string {
 	var sb strings.Builder
 	padded := []string{}
@@ -75,7 +66,7 @@ func buildResult(m matrix, r int, c int) string {
 // Encode converts plaintext to ciphertext
 func Encode(pt string) string {
 	nt := normalizeText(pt)
-	r, c := getDimensions(len(nt))
+	r, c := getSize(len(nt))
 	m := buildMatrix(nt, r, c)
 	return buildResult(m, r, c)
 }
