@@ -18,20 +18,16 @@ func normalizeText(pt string) string {
 	return sb.String()
 }
 
-func getSize(nl int) (r, c int) {
-	c = 1
-	for {
-		if c*c >= nl {
-			break
-		}
+func getSize(nt string) (int, int) {
+	nl := len(nt)
+	c := 1
+	for c*c < nl {
 		c++
 	}
 	if c*(c-1) >= nl {
-		r = c - 1
-	} else {
-		r = c
+		return c - 1, c
 	}
-	return
+	return c, c
 }
 
 func buildMatrix(nt string, r int, c int) matrix {
@@ -66,7 +62,7 @@ func buildResult(m matrix, r int, c int) string {
 // Encode converts plaintext to ciphertext
 func Encode(pt string) string {
 	nt := normalizeText(pt)
-	r, c := getSize(len(nt))
+	r, c := getSize(nt)
 	m := buildMatrix(nt, r, c)
 	return buildResult(m, r, c)
 }
