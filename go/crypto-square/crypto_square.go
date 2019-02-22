@@ -1,3 +1,4 @@
+// Package cryptosquare supports matrix-based encryption
 package cryptosquare
 
 import (
@@ -6,9 +7,9 @@ import (
 	"unicode"
 )
 
-type Matrix [][]rune
+type matrix [][]rune
 
-// Step 1: Normalize characters
+// Step 1: Normalize plaintext input
 func normalizeText(pt string) string {
 	var sb strings.Builder
 	for _, r := range pt {
@@ -40,9 +41,9 @@ func getDimensions(nl int) (int, int) {
 	return r, c
 }
 
-// Step 3: Build matrix data
-func buildMatrix(nt string, r int, c int) Matrix {
-	m := make(Matrix, r)
+// Step 3: Build matrix with normalized content
+func buildMatrix(nt string, r int, c int) matrix {
+	m := make(matrix, r)
 	for i := 0; i < r; i++ {
 		m[i] = make([]rune, c)
 	}
@@ -52,28 +53,26 @@ func buildMatrix(nt string, r int, c int) Matrix {
 	return m
 }
 
-// Step 4: Build inverted result
-func buildResult(m Matrix, r int, c int) string {
+// Step 4: Build ciphertext output as result
+func buildResult(m matrix, r int, c int) string {
 	var sb strings.Builder
-	var nb strings.Builder
+	padded := []string{}
 	for i := 0; i < c; i++ {
 		for j := 0; j < r; j++ {
 			curr := m[j][i]
 			if curr == 0 {
-				nb.WriteRune(' ')
+				sb.WriteRune(' ')
 			} else {
-				nb.WriteRune(curr)
+				sb.WriteRune(curr)
 			}
 		}
-		sb.WriteString(nb.String())
-		nb.Reset()
-		if i != c-1 {
-			sb.WriteRune(' ')
-		}
+		padded = append(padded, sb.String())
+		sb.Reset()
 	}
-	return sb.String()
+	return strings.Join(padded, " ")
 }
 
+// Encode converts plaintext to ciphertext
 func Encode(pt string) string {
 	nt := normalizeText(pt)
 	r, c := getDimensions(len(nt))
