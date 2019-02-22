@@ -6,6 +6,20 @@ import (
 	"unicode"
 )
 
+type Matrix [][]rune
+
+// Step 1: Normalize characters
+func normalizeText(pt string) string {
+	var sb strings.Builder
+	for _, r := range pt {
+		if unicode.IsNumber(r) || unicode.IsLetter(r) {
+			sb.WriteRune(unicode.ToLower(r))
+		}
+	}
+	return sb.String()
+}
+
+// Step 2: Get matrix rows and columns
 func getDimensions(nl int) (int, int) {
 	nsq := math.Sqrt(float64(nl))
 	r := int(math.Floor(nsq))
@@ -26,35 +40,23 @@ func getDimensions(nl int) (int, int) {
 	return r, c
 }
 
-func Encode(pt string) string {
-	// Step 1: Normalize characters
-	var sb strings.Builder
-	for _, r := range pt {
-		if unicode.IsNumber(r) || unicode.IsLetter(r) {
-			sb.WriteRune(unicode.ToLower(r))
-		}
-	}
-	nt := sb.String()
-
-	// Step 2: Build matrix
-	r, c := getDimensions(len(nt))
-
-	// Step 3: Build matrix
-	m := make([][]rune, r)
+// Step 3: Build matrix data
+func buildMatrix(nt string, r int, c int) Matrix {
+	m := make(Matrix, r)
 	for i := 0; i < r; i++ {
 		m[i] = make([]rune, c)
 	}
-
-	// Step 4: Fill matrix
 	for i, nr := range nt {
 		m[i/c][i%c] = nr
 	}
+	return m
+}
 
-	// Step 5: Build inverted string
-	sb.Reset()
+// Step 4: Build inverted result
+func buildResult(m Matrix, r int, c int) string {
+	var sb strings.Builder
 	var nb strings.Builder
 	for i := 0; i < c; i++ {
-		nb.Reset()
 		for j := 0; j < r; j++ {
 			curr := m[j][i]
 			if curr == 0 {
@@ -64,11 +66,17 @@ func Encode(pt string) string {
 			}
 		}
 		sb.WriteString(nb.String())
+		nb.Reset()
 		if i != c-1 {
 			sb.WriteRune(' ')
 		}
 	}
-	it := sb.String()
+	return sb.String()
+}
 
-	return it
+func Encode(pt string) string {
+	nt := normalizeText(pt)
+	r, c := getDimensions(len(nt))
+	m := buildMatrix(nt, r, c)
+	return buildResult(m, r, c)
 }
