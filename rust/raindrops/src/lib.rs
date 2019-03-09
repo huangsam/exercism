@@ -10,7 +10,7 @@ pub fn raindrops(n: u32) -> String {
         result.push_str("Plong");
     }
     if result.is_empty() {
-        return n.to_string();
+        result = n.to_string();
     }
-    return result;
+    result
 }
