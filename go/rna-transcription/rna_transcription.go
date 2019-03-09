@@ -1,4 +1,3 @@
-// Package strand deals with DNA and RNA
 package strand
 
 import (

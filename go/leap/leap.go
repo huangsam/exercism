@@ -1,4 +1,3 @@
-// Package leap is one step towards humanity
 package leap
 
 const testVersion = 3

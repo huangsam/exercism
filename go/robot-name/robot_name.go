@@ -1,4 +1,3 @@
-// Package robotname implements robot entity
 package robotname
 
 import (

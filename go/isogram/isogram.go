@@ -2,6 +2,7 @@ package isogram
 
 import "unicode"
 
+// IsIsogram shows whether word is an isogram
 func IsIsogram(word string) bool {
 	seen := make(map[rune]int)
 	for _, ch := range word {

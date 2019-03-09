@@ -1,4 +1,3 @@
-// Package triangle returns metadata about triangles passed in as a parameter.
 package triangle
 
 import "math"

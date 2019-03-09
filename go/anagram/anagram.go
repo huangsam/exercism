@@ -1,4 +1,3 @@
-// Package anagram provides routines for anagram detection
 package anagram
 
 import (

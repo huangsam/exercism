@@ -1,4 +1,3 @@
-// Package accumulate applies string conversion to slices
 package accumulate
 
 // Accumulate transforms a slice of string data

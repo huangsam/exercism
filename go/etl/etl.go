@@ -1,4 +1,3 @@
-// Package etl provides utilities for data cleanup
 package etl
 
 import (

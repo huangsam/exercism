@@ -1,4 +1,3 @@
-// Package bob contains the Hey API.
 package bob
 
 import "strings"

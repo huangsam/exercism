@@ -12,6 +12,7 @@ var letterScoresCoarse = map[string]int{
 	"QZ":         10,
 }
 
+// Score returns a letter-based score
 func Score(word string) int {
 	letterScoresGranular := make(map[rune]int)
 	for key, val := range letterScoresCoarse {

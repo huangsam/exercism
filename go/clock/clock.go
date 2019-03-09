@@ -1,4 +1,3 @@
-// Package clock has operations for Clock struct
 package clock
 
 import "fmt"

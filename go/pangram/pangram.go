@@ -1,4 +1,3 @@
-// Package pangram has a pangram checker
 package pangram
 
 import (

@@ -1,4 +1,3 @@
-// Package twofer is short for two for one.
 package twofer
 
 import (

@@ -1,4 +1,3 @@
-// package lsproduct has utilities for finding largest products
 package lsproduct
 
 import (

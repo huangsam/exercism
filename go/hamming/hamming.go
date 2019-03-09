@@ -1,4 +1,3 @@
-// Package hamming implements hamming distance
 package hamming
 
 import "fmt"

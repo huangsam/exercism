@@ -1,4 +1,3 @@
-// Package acronym converts full string into acronym
 package acronym
 
 import "strings"

@@ -1,4 +1,3 @@
-// Package gigasecond provides functionality for gigaseconds
 package gigasecond
 
 // import path for the time package from the standard library

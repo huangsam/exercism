@@ -1,4 +1,3 @@
-// Package cryptosquare supports matrix encryption
 package cryptosquare
 
 import (

@@ -1,4 +1,3 @@
-// Package wordcount has counting utilities
 package wordcount
 
 import (

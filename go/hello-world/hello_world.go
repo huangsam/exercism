@@ -1,4 +1,3 @@
-// Package greeting trains developers to return useful strings
 package greeting
 
 const testVersion = 4

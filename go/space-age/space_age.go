@@ -1,4 +1,3 @@
-// Package space helps find relative age
 package space
 
 type Planet string
