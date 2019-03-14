@@ -4,8 +4,10 @@ import (
 	"errors"
 )
 
+// ErrStop signals that the scan stopped
 var ErrStop = errors.New("scan stopped")
 
+// ErrInvalidBase signals that an invalid codon was found
 var ErrInvalidBase = errors.New("invalid base")
 
 var codonMapping = map[string]string{
@@ -32,7 +34,7 @@ var codonMapping = map[string]string{
 func FromCodon(input string) (string, error) {
 	if val, ok := codonMapping[input]; ok {
 		if val == "" {
-			return "", ErrStop
+			return val, ErrStop
 		}
 		return val, nil
 	}
