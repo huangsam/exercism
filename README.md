@@ -1,6 +1,6 @@
 # exercism
 
-Solutions for exercises on [exercism.io](https://exercism.io).
+Solutions to exercises on [exercism.io](https://exercism.io).
 
 The following languages tracks have been attempted:
 
