@@ -73,8 +73,8 @@ func (il IntList) Append(sil IntList) IntList {
 // Concat returns the aggregate list
 func (il IntList) Concat(col []IntList) IntList {
 	result := il
-	for _, c := range col {
-		result = result.Append(c)
+	for _, cl := range col {
+		result = result.Append(cl)
 	}
 	return result
 }
