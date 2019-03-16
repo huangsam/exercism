@@ -1,8 +1,8 @@
 # exercism
 
-Solutions to [exercism.io](https://exercism.io).
+Solutions for exercises on [exercism.io](https://exercism.io).
 
-The following languages have been used for the exercises:
+The following languages tracks have been attempted:
 
 - [C++](https://isocpp.org/)
 - [Golang](https://golang.org/)
