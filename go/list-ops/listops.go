@@ -14,7 +14,7 @@ func (il IntList) Length() int {
 	return len(il)
 }
 
-// Foldl returns the folded output from the left
+// Foldl reduces the initial value from the left
 func (il IntList) Foldl(fn binFunc, n int) int {
 	result := n
 	for i := 0; i < il.Length(); i++ {
@@ -23,7 +23,7 @@ func (il IntList) Foldl(fn binFunc, n int) int {
 	return result
 }
 
-// Foldr returns the folded output from the right
+// Foldr reduces the initial value from the right
 func (il IntList) Foldr(fn binFunc, n int) int {
 	result := n
 	for i := il.Length() - 1; i >= 0; i-- {
@@ -32,7 +32,7 @@ func (il IntList) Foldr(fn binFunc, n int) int {
 	return result
 }
 
-// Filter returns the filtered output
+// Filter returns the filtered list
 func (il IntList) Filter(fn predFunc) IntList {
 	result := IntList{}
 	for _, i := range il {
