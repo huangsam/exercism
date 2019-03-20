@@ -6,7 +6,7 @@
 using namespace std;
 
 namespace hamming {
-    int compute(const string& s1, const string& s2) {
+    int compute(string const &s1, string const &s2) {
         if (s1.length() != s2.length()) {
             throw domain_error("Both strands are not of equal length");
         }
