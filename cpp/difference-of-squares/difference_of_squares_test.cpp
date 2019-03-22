@@ -9,6 +9,7 @@ BOOST_AUTO_TEST_CASE(up_to_5)
     BOOST_REQUIRE_EQUAL(170, squares::difference(5));
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 BOOST_AUTO_TEST_CASE(up_to_10)
 {
     BOOST_REQUIRE_EQUAL(3025, squares::square_of_sum(10));
@@ -22,3 +23,4 @@ BOOST_AUTO_TEST_CASE(up_to_100)
     BOOST_REQUIRE_EQUAL(338350, squares::sum_of_squares(100));
     BOOST_REQUIRE_EQUAL(25164150, squares::difference(100));
 }
+#endif

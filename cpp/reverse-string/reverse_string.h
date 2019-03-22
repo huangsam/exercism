@@ -1,6 +1,8 @@
 #if !defined(REVERSE_H)
 #define REVERSE_H
 
+#define EXERCISM_RUN_ALL_TESTS
+
 #include <string>
 
 using namespace std;
