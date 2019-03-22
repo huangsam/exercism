@@ -6,6 +6,7 @@
 #include <cstdint>
 
 namespace space_age {
+
     class space_age {
     public:
         space_age(uint64_t seconds) { seconds_ = seconds; }
@@ -29,6 +30,7 @@ namespace space_age {
         double uranus_seconds_ = earth_seconds_ * 84.016846;
         double neptune_seconds_ = earth_seconds_ * 164.79132;
     };
+
 }
 
 #endif
