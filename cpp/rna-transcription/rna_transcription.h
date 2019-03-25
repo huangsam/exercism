@@ -1,24 +1,21 @@
 #if !defined(TRANSCRIPTION_H)
 #define TRANSCRIPTION_H
 
+#define EXERCISM_RUN_ALL_TESTS
+
 #include <string>
 
 using namespace std;
 
-#define EXERCISM_RUN_ALL_TESTS
-
 namespace transcription {
     char to_rna(char in) {
-        if (in == 'G') {
-            return 'C';
-        } else if (in == 'C') {
-            return 'G';
-        } else if (in == 'A') {
-            return 'U';
-        } else if (in == 'T') {
-            return 'A';
+        switch (in) {
+            case 'C': return 'G';
+            case 'G': return 'C';
+            case 'A': return 'U';
+            case 'T': return 'A';
+            default: return '?';
         }
-        return '?';
     }
 
     string to_rna(string in) {
