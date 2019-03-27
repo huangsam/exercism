@@ -8,6 +8,7 @@
 using namespace std;
 
 namespace transcription {
+
     char to_rna(char in) {
         switch (in) {
             case 'C': return 'G';
@@ -25,6 +26,7 @@ namespace transcription {
         }
         return result;
     }
+
 }
 
 #endif
