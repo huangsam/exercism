@@ -19,7 +19,7 @@ namespace transcription {
         }
     }
 
-    string to_rna(string in) {
+    string to_rna(const string &in) {
         string result;
         for (const auto &i : in) {
             result += to_rna(i);
