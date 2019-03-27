@@ -17,7 +17,7 @@ namespace etl {
         return in;
     }
 
-    map<char, int> transform(const map<int, vector<char>> old) {
+    map<char, int> transform(const map<int, vector<char>> &old) {
         map<char, int> result;
         for (const auto &it : old) {
             int const points = it.first;

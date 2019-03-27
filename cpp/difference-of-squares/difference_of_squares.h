@@ -4,6 +4,7 @@
 #define EXERCISM_RUN_ALL_TESTS
 
 namespace squares {
+
     int square_of_sum(int x) {
         int sum = x * (x + 1) / 2;
         return sum * sum;
@@ -16,6 +17,7 @@ namespace squares {
     int difference(int x) {
         return square_of_sum(x) - sum_of_squares(x);
     }
+
 }
 
 #endif

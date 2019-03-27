@@ -3,9 +3,11 @@
 
 #include <string>
 
+using namespace std;
+
 namespace hello_world {
 
-    std::string hello() {
+    const string hello() {
         return "Hello, World!";
     }
 
