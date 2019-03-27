@@ -20,8 +20,8 @@ namespace etl {
     map<char, int> transform(const map<int, vector<char>> &old) {
         map<char, int> result;
         for (const auto &it : old) {
-            int const points = it.first;
-            const vector<char> chars = it.second;
+            const auto points = it.first;
+            const auto chars = it.second;
             for (const auto &sit : chars) {
                 result[tolower(sit)] = points;
             }
