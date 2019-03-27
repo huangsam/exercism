@@ -10,9 +10,9 @@ using namespace std;
 
 namespace isogram {
 
-    bool is_isogram(string const &input) {
+    bool is_isogram(const string &input) {
         bool c[26] = {false};
-        for (auto const &it : input) {
+        for (const auto &it : input) {
             if (isalpha(it)) {
                 int cid = (int) (tolower(it) - 'a');
                 if (c[cid]) {

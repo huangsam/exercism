@@ -17,12 +17,12 @@ namespace etl {
         return in;
     }
 
-    map<char, int> transform(map<int, vector<char>> const old) {
+    map<char, int> transform(const map<int, vector<char>> old) {
         map<char, int> result;
-        for (auto const &it : old) {
+        for (const auto &it : old) {
             int const points = it.first;
-            vector<char> const chars = it.second;
-            for (auto const &sit : chars) {
+            const vector<char> chars = it.second;
+            for (const auto &sit : chars) {
                 result[tolower(sit)] = points;
             }
         }
