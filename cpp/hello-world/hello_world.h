@@ -3,8 +3,6 @@
 
 #include <string>
 
-using namespace std;
-
 namespace hello_world {
 
     const std::string hello() {
