@@ -8,6 +8,9 @@
 
 namespace etl {
 
+    typedef std::map<int, std::vector<char>> oldmap;
+    typedef std::map<char, int> newmap;
+
     char tolower(char in) {
         if ('A' <= in && in <= 'Z') {
             return in - ('Z' - 'z');
@@ -15,8 +18,8 @@ namespace etl {
         return in;
     }
 
-    std::map<char, int> transform(const std::map<int, std::vector<char>> &old) {
-        std::map<char, int> result;
+    newmap transform(const oldmap &old) {
+        newmap result;
         for (const auto &it : old) {
             const auto points = it.first;
             const auto chars = it.second;
