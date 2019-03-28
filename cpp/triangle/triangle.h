@@ -5,8 +5,6 @@
 
 #include <stdexcept>
 
-using namespace std;
-
 namespace triangle {
 
     enum flavor { equilateral, isosceles, scalene };
@@ -26,7 +24,7 @@ namespace triangle {
 
     flavor kind(double a, double b, double c) {
         if (is_invalid(a, b, c)) {
-            throw domain_error("invalid triangle");
+            throw std::domain_error("invalid triangle");
         } else if (is_equilateral(a, b, c)) {
             return equilateral;
         } else if (is_isosceles(a, b, c)) {

@@ -5,12 +5,10 @@
 
 #include <string>
 
-using namespace std;
-
 namespace raindrops {
 
-    string convert(int n) {
-        string s = "";
+    std::string convert(int n) {
+        std::string s = "";
         if (n % 3 == 0) {
             s += "Pling";
         }
@@ -23,7 +21,7 @@ namespace raindrops {
         if (s.length() > 0) {
             return s;
         }
-        return to_string(n);
+        return std::to_string(n);
     }
 
 }

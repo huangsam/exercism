@@ -6,8 +6,6 @@
 #include <map>
 #include <vector>
 
-using namespace std;
-
 namespace etl {
 
     char tolower(char in) {
@@ -17,8 +15,8 @@ namespace etl {
         return in;
     }
 
-    map<char, int> transform(const map<int, vector<char>> &old) {
-        map<char, int> result;
+    std::map<char, int> transform(const std::map<int, std::vector<char>> &old) {
+        std::map<char, int> result;
         for (const auto &it : old) {
             const auto points = it.first;
             const auto chars = it.second;

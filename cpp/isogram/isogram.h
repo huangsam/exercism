@@ -6,11 +6,9 @@
 #include <cctype>
 #include <string>
 
-using namespace std;
-
 namespace isogram {
 
-    bool is_isogram(const string &input) {
+    bool is_isogram(const std::string &input) {
         bool c[26] = {false};
         for (const auto &it : input) {
             if (isalpha(it)) {

@@ -7,7 +7,7 @@ using namespace std;
 
 namespace hello_world {
 
-    const string hello() {
+    const std::string hello() {
         return "Hello, World!";
     }
 

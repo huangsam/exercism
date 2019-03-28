@@ -5,8 +5,6 @@
 
 #include <string>
 
-using namespace std;
-
 namespace transcription {
 
     char to_rna(char in) {
@@ -19,8 +17,8 @@ namespace transcription {
         }
     }
 
-    string to_rna(const string &in) {
-        string result;
+    std::string to_rna(const std::string &in) {
+        std::string result;
         for (const auto &i : in) {
             result += to_rna(i);
         }

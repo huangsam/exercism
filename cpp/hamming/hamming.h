@@ -5,13 +5,11 @@
 
 #include <string>
 
-using namespace std;
-
 namespace hamming {
 
-    int compute(const string &s1, const string &s2) {
+    int compute(const std::string &s1, const std::string &s2) {
         if (s1.length() != s2.length()) {
-            throw domain_error("Both strands are not of equal length");
+            throw std::domain_error("strands are not of equal length");
         }
         int result = 0;
         int i = 0;
