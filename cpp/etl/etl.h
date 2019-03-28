@@ -3,6 +3,7 @@
 
 #define EXERCISM_RUN_ALL_TESTS
 
+#include <cctype>
 #include <map>
 #include <vector>
 
@@ -10,13 +11,6 @@ namespace etl {
 
     typedef std::map<int, std::vector<char>> oldmap;
     typedef std::map<char, int> newmap;
-
-    char tolower(char in) {
-        if ('A' <= in && in <= 'Z') {
-            return in - ('Z' - 'z');
-        }
-        return in;
-    }
 
     newmap transform(const oldmap &old) {
         newmap result;
