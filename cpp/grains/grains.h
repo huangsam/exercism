@@ -14,7 +14,7 @@ namespace grains {
     }
 
     grains_count total() {
-        return ~static_cast<grains_count>(0);
+        return ~0;
     }
 
 }
