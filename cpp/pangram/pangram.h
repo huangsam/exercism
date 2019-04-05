@@ -11,7 +11,7 @@ namespace pangram {
     const int alpha_size = 26;
 
     bool is_pangram(const std::string &input) {
-        bool cache[alpha_size];
+        bool cache[alpha_size] = {false};
         for (const auto &i : input) {
             if (std::isalpha(i)) {
                 int ch = int(std::tolower(i) - 'a');
