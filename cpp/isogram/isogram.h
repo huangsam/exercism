@@ -8,15 +8,17 @@
 
 namespace isogram {
 
+    const int alpha_size = 26;
+
     bool is_isogram(const std::string &input) {
-        bool c[26] = {false};
+        bool cache[alpha_size] = {false};
         for (const auto &it : input) {
             if (isalpha(it)) {
                 int cid = (int) (tolower(it) - 'a');
-                if (c[cid]) {
+                if (cache[cid]) {
                     return false;
                 }
-                c[cid] = true;
+                cache[cid] = true;
             }
         }
         return true;
