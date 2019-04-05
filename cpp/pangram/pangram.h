@@ -1,20 +1,24 @@
 #if !defined(PANGRAM_H)
 #define PANGRAM_H
 
+#define EXERCISM_RUN_ALL_TESTS
+
 #include <string>
 #include <cctype>
 
 namespace pangram {
 
+    #define ALPHABET_SIZE 26
+
     bool is_pangram(const std::string &input) {
-        bool alpha[26];
+        bool alpha[ALPHABET_SIZE];
         for (const auto &i : input) {
             if (std::isalpha(i)) {
                 int ch = int(std::tolower(i) - 'a');
                 alpha[ch] |= true;
             }
         }
-        for (int i = 0; i < 26; i++) {
+        for (int i = 0; i < ALPHABET_SIZE; i++) {
             if (!alpha[i]) return false;
         }
         return true;
