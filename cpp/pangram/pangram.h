@@ -3,12 +3,12 @@
 
 #define EXERCISM_RUN_ALL_TESTS
 
+#define ALPHABET_SIZE 26
+
 #include <string>
 #include <cctype>
 
 namespace pangram {
-
-    #define ALPHABET_SIZE 26
 
     bool is_pangram(const std::string &input) {
         bool alpha[ALPHABET_SIZE];
