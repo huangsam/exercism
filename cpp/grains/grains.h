@@ -14,7 +14,7 @@ namespace grains {
     }
 
     grains_count total() {
-        return ~0;
+        return ~0; // 2^64-1
     }
 
 }
