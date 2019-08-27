@@ -1,6 +1,9 @@
-.gradle/
 .idea/
 build/
 out/
-allGradle
 *.class
+allGradle
+gradlew
+gradlew.bat
+.gradle/
+gradle/
