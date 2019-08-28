@@ -2,14 +2,15 @@ package twofer
 
 import (
 	"fmt"
-	"strings"
 )
 
 // ShareWith returns a sentence given a name or lack thereof.
 func ShareWith(s string) string {
-	result := "One for %v, one for me."
-	if !strings.EqualFold(s, "Alice") && !strings.EqualFold(s, "Bob") {
-		return fmt.Sprintf(result, "you")
+	var noun string
+	if len(s) == 0 {
+		noun = "you"
+	} else {
+		noun = s
 	}
-	return fmt.Sprintf(result, s)
+	return fmt.Sprintf("One for %v, one for me.", noun)
 }
