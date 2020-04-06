@@ -10,4 +10,5 @@ CMakeScripts/
 Debug/
 *.xcodeproj/
 *.build/
+catch.hpp
 .exercism/
