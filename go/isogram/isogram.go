@@ -6,10 +6,10 @@ import "unicode"
 func IsIsogram(word string) bool {
 	seen := make(map[rune]int)
 	for _, ch := range word {
-        if ch == '-' || ch == ' ' {
-            continue
-        }
-        newCh := unicode.ToLower(ch)
+		if ch == '-' || ch == ' ' {
+			continue
+		}
+		newCh := unicode.ToLower(ch)
 		if _, ok := seen[newCh]; ok {
 			seen[newCh] += 1
 		} else {
