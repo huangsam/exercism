@@ -19,22 +19,19 @@ func Hey(remark string) string {
 		}
 	}
 
-	charsAfterQuestion := lastQuestion <= lastUpper ||
-		lastQuestion <= lastLower ||
-		lastQuestion <= lastNumber
-
+	isQuestion := lastQuestion > lastUpper && lastQuestion > lastLower && lastQuestion > lastNumber
 	isYelling := lastUpper > -1 && lastLower == -1
-	saidSomething := lastUpper > -1 || lastLower > -1 || lastNumber > -1
+	isSomething := lastUpper > -1 || lastLower > -1 || lastNumber > -1
 
-	if lastQuestion > -1 {
+	if isQuestion {
 		if isYelling {
 			return "Calm down, I know what I'm doing!"
-		} else if !charsAfterQuestion {
+		} else {
 			return "Sure."
 		}
 	} else if isYelling {
 		return "Whoa, chill out!"
-	} else if !saidSomething {
+	} else if !isSomething {
 		return "Fine. Be that way!"
 	}
 	return "Whatever."
