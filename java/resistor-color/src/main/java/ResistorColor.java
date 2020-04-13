@@ -1,13 +1,13 @@
 class ResistorColor {
 
-    private static final String[] colors = {
+    private static final String[] bandColors = {
             "black", "brown", "red", "orange", "yellow",
             "green", "blue", "violet", "grey", "white"
     };
 
     public int colorCode(String color) {
-        for (int i = 0; i < colors.length; i++) {
-            if (colors[i] == color) {
+        for (int i = 0; i < bandColors.length; i++) {
+            if (bandColors[i] == color) {
                 return i;
             }
         }
@@ -15,6 +15,6 @@ class ResistorColor {
     }
 
     public String[] colors() {
-        return colors;
+        return bandColors;
     }
 }
