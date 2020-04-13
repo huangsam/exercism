@@ -1,4 +1,5 @@
 public class DoublyLinkedList<T> {
+
     private ListNode<T> head = null;
     private ListNode<T> tail = null;
 
@@ -64,9 +65,11 @@ public class DoublyLinkedList<T> {
         head.setPrev(node);
         head = node;
     }
+
 }
 
 class ListNode<T> {
+
     private T value;
     private ListNode next = null;
     private ListNode prev = null;
@@ -94,4 +97,5 @@ class ListNode<T> {
     public void setPrev(ListNode p) {
         prev = p;
     }
+
 }

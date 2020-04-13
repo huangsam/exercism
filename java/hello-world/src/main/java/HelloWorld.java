@@ -1,4 +1,5 @@
 public class HelloWorld {
+
     public static String hello(String name) {
         if (name == null) {
             return "Hello, World!";
@@ -7,4 +8,5 @@ public class HelloWorld {
         }
         return String.format("Hello, %s!", name);
     }
+
 }

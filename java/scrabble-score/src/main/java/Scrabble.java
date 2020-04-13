@@ -41,4 +41,5 @@ class Scrabble {
         }
         return result;
     }
+
 }

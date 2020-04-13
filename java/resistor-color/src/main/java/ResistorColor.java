@@ -17,4 +17,5 @@ class ResistorColor {
     public String[] colors() {
         return bandColors;
     }
+
 }

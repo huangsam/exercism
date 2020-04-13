@@ -40,4 +40,5 @@ class Matrix {
         String[] columns = firstRow.split(" ");
         return columns.length;
     }
+
 }

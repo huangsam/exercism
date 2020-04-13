@@ -1,4 +1,5 @@
 public class RnaTranscription {
+
     public String transcribe(String dnaStrand) {
         String result = "";
         for (int i = 0; i < dnaStrand.length(); i++) {
@@ -23,4 +24,5 @@ public class RnaTranscription {
         }
         return result;
     }
+
 }
