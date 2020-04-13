@@ -8,21 +8,12 @@ class DnDCharacter {
     private static final int diceCount = 4;
     private static final Random random = new Random();
 
-    private int strength;
-    private int dexterity;
-    private int constitution;
-    private int intelligence;
-    private int wisdom;
-    private int charisma;
-
-    public DnDCharacter() {
-        strength = ability();
-        dexterity = ability();
-        constitution = ability();
-        intelligence = ability();
-        wisdom = ability();
-        charisma = ability();
-    }
+    private int strength = ability();
+    private int dexterity = ability();
+    private int constitution = ability();
+    private int intelligence = ability();
+    private int wisdom = ability();
+    private int charisma = ability();
 
     private int throwDice() {
         return random.nextInt(6) + 1; // [0..5] + 1
