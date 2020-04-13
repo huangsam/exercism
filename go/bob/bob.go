@@ -25,17 +25,18 @@ func Hey(remark string) string {
 	isYelling := lastUpper > -1 && lastLower == -1
 	isSilent := lastAlphaNum == -1
 
-	if isAsking {
-		if isYelling {
-			return "Calm down, I know what I'm doing!"
-		}
+	switch {
+	case isAsking && isYelling:
+		return "Calm down, I know what I'm doing!"
+	case isAsking:
 		return "Sure."
-	} else if isYelling {
+	case isYelling:
 		return "Whoa, chill out!"
-	} else if isSilent {
+	case isSilent:
 		return "Fine. Be that way!"
+	default:
+		return "Whatever."
 	}
-	return "Whatever."
 }
 
 // Get the maximum of three integers
