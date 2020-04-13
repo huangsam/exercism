@@ -5,6 +5,7 @@ import java.util.Random;
 class DnDCharacter {
 
     private static final int baseHitPoints = 10;
+    private static final int diceCount = 4;
     private static final Random random = new Random();
 
     private int strength;
@@ -28,11 +29,10 @@ class DnDCharacter {
     }
 
     protected int ability() {
-        PriorityQueue<Integer> queue = new PriorityQueue<Integer>(4, Collections.reverseOrder());
-        queue.add(throwDice());
-        queue.add(throwDice());
-        queue.add(throwDice());
-        queue.add(throwDice());
+        PriorityQueue<Integer> queue = new PriorityQueue<Integer>(diceCount, Collections.reverseOrder());
+        for (int i = 0; i < diceCount; i++) {
+            queue.add(throwDice());
+        }
         return queue.poll() + queue.poll() + queue.poll();
     }
 
