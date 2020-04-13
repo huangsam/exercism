@@ -19,9 +19,11 @@ func Hey(remark string) string {
 		}
 	}
 
-	isAsking := lastQuestion > lastUpper && lastQuestion > lastLower && lastQuestion > lastNumber
+	lastAlphaNum := maxThree(lastUpper, lastLower, lastNumber)
+
+	isAsking := lastQuestion > lastAlphaNum
 	isYelling := lastUpper > -1 && lastLower == -1
-	isSilent := lastUpper == -1 && lastLower == -1 && lastNumber == -1
+	isSilent := lastAlphaNum == -1
 
 	if isAsking {
 		if isYelling {
@@ -34,4 +36,15 @@ func Hey(remark string) string {
 		return "Fine. Be that way!"
 	}
 	return "Whatever."
+}
+
+// Get the maximum of three integers
+func maxThree(a int, b int, c int) int {
+	if a >= b && a >= c {
+		return a
+	}
+	if b >= c && b >= a {
+		return b
+	}
+	return c
 }
