@@ -36,6 +36,7 @@ set_target_properties(${exercise} PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED OFF
     CXX_EXTENSIONS OFF
+    SUFFIX ".out"
 )
 
 if("${CMAKE_CXX_COMPILER_ID}" MATCHES "(GNU|Clang)")
