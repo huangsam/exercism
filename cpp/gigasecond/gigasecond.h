@@ -10,9 +10,7 @@ using boost::posix_time::seconds;
 
 namespace gigasecond {
 
-    ptime advance(const ptime &current) {
-        return current + seconds(1000000000);
-    }
+    ptime advance(const ptime &current);
 
 }
 
