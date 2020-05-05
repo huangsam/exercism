@@ -1,6 +1,6 @@
 #include "difference_of_squares.h"
 
-namespace squares {
+namespace difference_of_squares {
 
     int square_of_sum(int x) {
         int sum = x * (x + 1) / 2;
@@ -15,4 +15,4 @@ namespace squares {
         return square_of_sum(x) - sum_of_squares(x);
     }
 
-}  // namespace squares
+}  // namespace difference_of_squares

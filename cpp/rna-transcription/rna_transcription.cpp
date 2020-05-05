@@ -1,6 +1,6 @@
 #include "rna_transcription.h"
 
-namespace transcription {
+namespace rna_transcription {
 
     char to_rna(char in) {
         switch (in) {
@@ -20,4 +20,4 @@ namespace transcription {
         return result;
     }
 
-}  // namespace transcription
+}  // namespace rna_transcription

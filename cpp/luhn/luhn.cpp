@@ -1,4 +1,4 @@
-#include "lunh.h"
+#include "luhn.h"
 
 namespace luhn {
 

@@ -3,12 +3,12 @@
 
 #define EXERCISM_RUN_ALL_TESTS
 
-namespace squares {
+namespace difference_of_squares {
 
     int square_of_sum(int x);
     int sum_of_squares(int x);
     int difference(int x);
 
-}  // namespace squares
+}  // namespace difference_of_squares
 
 #endif // DIFFERENCE_OF_SQUARES_H
