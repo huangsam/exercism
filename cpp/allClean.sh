@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eu
-TEMPLATE_NAME="allTemplate"
+TEMPLATE_NAME="allBootstrap"
 for item in *; do
     if [[ ! -d $item ]]; then
         continue
@@ -9,6 +9,6 @@ for item in *; do
         continue
     fi
     pushd "$item"
-    make clean
+    test -f Makefile && make clean
     popd
 done

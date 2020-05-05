@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eu
-TEMPLATE_NAME="allTemplate"
+TEMPLATE_NAME="allBootstrap"
 TEMPLATE_DIR="$(pwd)/$TEMPLATE_NAME"
 for item in *; do
     if [[ ! -d $item ]]; then

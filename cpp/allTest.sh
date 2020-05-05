@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eu
-TEMPLATE_NAME="allTemplate"
+TEMPLATE_NAME="allBootstrap"
 START_FROM="${1:-}"
 for item in *; do
     if [[ ! -d $item ]]; then
