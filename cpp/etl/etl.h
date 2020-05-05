@@ -14,6 +14,6 @@ namespace etl {
 
     newmap transform(const oldmap &old);
 
-}
+}  // namespace etl
 
-#endif
+#endif // ETL_H

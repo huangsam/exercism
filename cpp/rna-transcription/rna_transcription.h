@@ -10,6 +10,6 @@ namespace transcription {
     char to_rna(char in);
     std::string to_rna(const std::string &in);
 
-}
+}  // namespace transcription
 
-#endif
+#endif // TRANSCRIPTION_H

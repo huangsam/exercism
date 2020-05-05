@@ -14,4 +14,4 @@ namespace etl {
         return result;
     }
 
-}
+}  // namespace etl

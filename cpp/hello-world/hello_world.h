@@ -7,6 +7,6 @@ namespace hello_world {
 
     const std::string hello();
 
-}
+}  // namespace hello_world
 
-#endif
+#endif // HELLO_WORLD_H

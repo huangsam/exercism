@@ -7,6 +7,6 @@ namespace leap {
 
     bool is_leap_year(int year);
 
-}
+}  // namespace leap
 
-#endif
+#endif // LEAP_H

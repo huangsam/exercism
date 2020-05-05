@@ -19,4 +19,4 @@ namespace raindrops {
         return std::to_string(n);
     }
 
-}
+}  // namespace raindrops

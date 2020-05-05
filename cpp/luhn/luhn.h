@@ -9,6 +9,6 @@ namespace luhn {
 
     bool valid(const std::string &candidate);
 
-}
+}  // namespace luhn
 
-#endif
+#endif // LUHN_H

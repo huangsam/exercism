@@ -16,4 +16,4 @@ namespace isogram {
         return true;
     }
 
-}
+}  // namespace isogram

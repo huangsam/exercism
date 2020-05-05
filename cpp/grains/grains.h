@@ -13,6 +13,6 @@ namespace grains {
 
     grains_count total();
 
-}
+}  // namespace grains
 
-#endif
+#endif // GRAINS_H

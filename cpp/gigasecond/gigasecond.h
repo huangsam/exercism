@@ -12,6 +12,6 @@ namespace gigasecond {
 
     ptime advance(const ptime &current);
 
-}
+}  // namespace gigasecond
 
-#endif
+#endif // GIGASECOND_H

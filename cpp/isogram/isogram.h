@@ -12,6 +12,6 @@ namespace isogram {
 
     bool is_isogram(const std::string &input);
 
-}
+}  // namespace isogram
 
-#endif
+#endif // ISOGRAM_H

@@ -9,6 +9,6 @@ namespace squares {
     int sum_of_squares(int x);
     int difference(int x);
 
-}
+}  // namespace squares
 
-#endif
+#endif // DIFFERENCE_OF_SQUARES_H

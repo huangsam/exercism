@@ -14,6 +14,6 @@ namespace triangle {
     bool is_isosceles(double a, double b, double c);
     flavor kind(double a, double b, double c);
 
-}
+}  // namespace triangle
 
-#endif
+#endif // TRIANGLE_H

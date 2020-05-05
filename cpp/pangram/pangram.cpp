@@ -16,4 +16,4 @@ namespace pangram {
         return true;
     }
 
-}
+}  // namespace pangram

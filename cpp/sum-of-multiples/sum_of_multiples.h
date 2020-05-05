@@ -9,6 +9,6 @@ namespace sum_of_multiples {
 
     int to(const std::set<int> &integers, int number);
 
-}
+}  // namespace sum_of_multiples
 
-#endif
+#endif // SUM_OF_MULTIPLES_H

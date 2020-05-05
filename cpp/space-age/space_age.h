@@ -31,6 +31,6 @@ namespace space_age {
         static constexpr double neptune_seconds_ = earth_seconds_ * 164.79132;
     };
 
-}
+}  // namespace space_age
 
-#endif
+#endif // SPACE_AGE_H

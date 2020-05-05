@@ -6,4 +6,4 @@ namespace gigasecond {
         return current + seconds(1000000000);
     }
 
-}
+}  // namespace gigasecond

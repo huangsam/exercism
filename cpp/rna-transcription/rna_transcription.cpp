@@ -20,4 +20,4 @@ namespace transcription {
         return result;
     }
 
-}
+}  // namespace transcription

@@ -19,4 +19,4 @@ namespace luhn {
         return length > 1 && sum % 10 == 0;
     }
 
-}
+}  // namespace luhn

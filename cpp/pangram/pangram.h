@@ -12,6 +12,6 @@ namespace pangram {
 
     bool is_pangram(const std::string &input);
 
-}
+}  // namespace pangram
 
-#endif
+#endif // PANGRAM_H

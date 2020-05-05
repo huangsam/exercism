@@ -6,4 +6,4 @@ namespace hello_world {
         return "Hello, World!";
     }
 
-}
+}  // namespace hello_world

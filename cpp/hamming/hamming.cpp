@@ -16,4 +16,4 @@ namespace hamming {
         return result;
     }
 
-}
+}  // namespace hamming

@@ -12,4 +12,4 @@ namespace grains {
         return ~0; // 2^64-1
     }
 
-}
+}  // namespace grains

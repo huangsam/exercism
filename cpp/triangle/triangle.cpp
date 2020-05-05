@@ -26,4 +26,4 @@ namespace triangle {
         return scalene;
     }
 
-}
+}  // namespace triangle

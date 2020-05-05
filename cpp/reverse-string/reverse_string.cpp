@@ -8,4 +8,4 @@ namespace reverse_string {
         return result;
     }
 
-}
+}  // namespace reverse_string

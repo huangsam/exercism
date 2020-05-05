@@ -15,4 +15,4 @@ namespace sum_of_multiples {
         return sum;
     }
 
-}
+}  // namespace sum_of_multiples

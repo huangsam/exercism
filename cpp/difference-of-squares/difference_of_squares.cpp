@@ -15,4 +15,4 @@ namespace squares {
         return square_of_sum(x) - sum_of_squares(x);
     }
 
-}
+}  // namespace squares
