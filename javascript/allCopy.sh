@@ -6,11 +6,12 @@ for item in *; do
     if [[ ! -d $item ]]; then
         continue
     fi
-    if [[ $item == $COPY_NAME ]]; then
+    if [[ $item == "$COPY_NAME" ]]; then
         continue
     fi
     pushd "$item"
     cp "$COPY_DIR/.eslintrc" .
+    cp "$COPY_DIR/.npmrc" .
     cp "$COPY_DIR/babel.config.js" .
     cp "$COPY_DIR/package-lock.json" .
     cp "$COPY_DIR/package.json" .

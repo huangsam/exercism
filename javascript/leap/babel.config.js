@@ -8,6 +8,8 @@ module.exports = {
         },
         useBuiltIns: false,
       },
+
     ],
   ],
+  plugins: ["@babel/plugin-syntax-bigint"]
 };
