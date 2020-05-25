@@ -7,7 +7,7 @@
 
 namespace raindrops {
 
-    std::string convert(int n);
+    const std::string convert(int n);
 
 }  // namespace raindrops
 

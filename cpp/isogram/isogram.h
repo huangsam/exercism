@@ -8,7 +8,7 @@
 
 namespace isogram {
 
-    const int alpha_size = 26;
+    constexpr int ALPHA_SIZE = 26;
 
     bool is_isogram(const std::string &input);
 

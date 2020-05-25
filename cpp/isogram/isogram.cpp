@@ -3,7 +3,7 @@
 namespace isogram {
 
     bool is_isogram(const std::string &input) {
-        bool cache[alpha_size] = {false};
+        bool cache[ALPHA_SIZE] = {false};
         for (const auto &it : input) {
             if (isalpha(it)) {
                 int cid = (int) (tolower(it) - 'a');

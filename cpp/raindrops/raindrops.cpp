@@ -2,7 +2,7 @@
 
 namespace raindrops {
 
-    std::string convert(int n) {
+    const std::string convert(int n) {
         std::string s = "";
         if (n % 3 == 0) {
             s += "Pling";
