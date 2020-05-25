@@ -11,5 +11,5 @@ Makefile
 *.out
 **/test/catch.hpp
 **/test/tests-main.cpp
-!allBootstrap/test/tests-main.cpp
-!allBootstrap/CMakeLists.txt
+!.bootstrap/test/tests-main.cpp
+!.bootstrap/CMakeLists.txt

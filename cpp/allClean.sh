@@ -1,6 +1,6 @@
 #!/bin/bash
 set -eu
-TEMPLATE_NAME="allBootstrap"
+TEMPLATE_NAME=".bootstrap"
 for item in *; do
     if [[ ! -d $item ]]; then
         continue
