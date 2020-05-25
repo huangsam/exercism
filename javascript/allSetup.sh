@@ -1,5 +1,6 @@
 #!/bin/bash
 set -eu
+shopt -s dotglob
 TEMPLATE_NAME=".bootstrap"
 TEMPLATE_DIR="$(pwd)/$TEMPLATE_NAME"
 for item in *; do
