@@ -1,22 +1,19 @@
 #include "acronym.h"
-#include <locale>
+#include <numeric>
+#include <regex>
 
 namespace acronym {
 
     const std::string acronym(const std::string &input) {
-        std::string result{};
-        bool firstAlpha = true;
-        for (auto sit = input.begin(); sit != input.end(); sit++) {
-            const char ch = *sit;
-            if (std::isalpha(ch)) {
-                if (!firstAlpha) continue;
-                firstAlpha = false;
-                result += std::toupper(ch);
-            } else {
-                firstAlpha = true;
+        const std::regex expr(R"(\w+)");
+        return std::accumulate(
+            std::sregex_iterator(input.begin(), input.end(), expr),
+            std::sregex_iterator(),
+            std::string{},
+            [](const auto &result, const auto &match) {
+                return result + (char) std::toupper(match.str()[0]);
             }
-        }
-        return result;
+        );
     }
 
 }  // namespace acronym
