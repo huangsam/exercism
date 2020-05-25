@@ -10,6 +10,6 @@ for item in *; do
         continue
     fi
     pushd "$item"
-    cp "$TEMPLATE_DIR/*" .
+    cp "$TEMPLATE_DIR/"* .
     popd
 done
