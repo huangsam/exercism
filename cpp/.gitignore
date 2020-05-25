@@ -7,5 +7,7 @@ CMakeScripts/
 Debug/
 *.xcodeproj/
 *.build/
-catch.hpp
 *.out
+**/test/catch.hpp
+**/test/tests-main.cpp
+!allBootstrap/
