@@ -1,8 +1,10 @@
 #if !defined(NUCLEOTIDE_COUNT_H)
 #define NUCLEOTIDE_COUNT_H
 
-#include <string>
+#define EXERCISM_RUN_ALL_TESTS
+
 #include <map>
+#include <string>
 
 namespace nucleotide_count {
 
