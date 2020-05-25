@@ -1,23 +1,22 @@
 #include "acronym.h"
 #include <locale>
-#include <sstream>
 
 namespace acronym {
 
     const std::string acronym(const std::string &input) {
-        std::stringstream ss;
-        for (std::size_t i = 0; i < input.length(); i++) {
-            const char ch = input[i];
-            if (i == 0 && isalpha(ch)) {
-                ss << (char) std::toupper(ch);
-            } else if (i + 1 < input.length() && (ch == '-' || ch == ' ')) {
-                const char nextCh = input[i + 1];
-                if (isalpha(nextCh)) {
-                    ss << (char) std::toupper(nextCh);
-                }
+        std::string result{};
+        bool firstAlpha = true;
+        for (auto sit = input.begin(); sit != input.end(); sit++) {
+            const char ch = *sit;
+            if (std::isalpha(ch)) {
+                if (!firstAlpha) continue;
+                firstAlpha = false;
+                result += std::toupper(ch);
+            } else {
+                firstAlpha = true;
             }
         }
-        return ss.str();
+        return result;
     }
 
 }  // namespace acronym
