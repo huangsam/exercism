@@ -3,16 +3,16 @@
 
 namespace collatz_conjecture {
 
-    int steps(int number) {
-        if (number < 1) {
-            throw std::domain_error("invalid number");
+    int steps(int n) {
+        if (n < 1) {
+            throw std::domain_error("invalid n");
         }
         int count = 0;
-        while (number != 1) {
-            if (number % 2 == 0) {
-                number = number / 2;
+        while (n != 1) {
+            if (n % 2 == 0) {
+                n = n / 2;
             } else {
-                number = 3 * number + 1;
+                n = 3 * n + 1;
             }
             count++;
         }
