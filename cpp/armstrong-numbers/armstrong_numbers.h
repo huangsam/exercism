@@ -3,7 +3,6 @@
 
 namespace armstrong_numbers {
 
-    int num_of_digits(int number);
     bool is_armstrong_number(int number);
 
 }  // namespace armstrong_numbers
