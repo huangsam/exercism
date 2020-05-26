@@ -5,12 +5,9 @@ namespace armstrong_numbers {
 
     bool is_armstrong_number(int number) {
         int sum = 0;
-        int power = (int) std::log10(number) + 1;
-        int remainder = number;
-        while (remainder) {
-            int digit = remainder % 10;
-            sum += (int) std::pow(digit, power);
-            remainder = remainder / 10;
+        int digits = (int) (std::log10(number) + 1);
+        for (int left = number; left > 0; left /= 10) {
+            sum += (int) std::pow(left % 10, digits);
         }
         return number == sum;
     }

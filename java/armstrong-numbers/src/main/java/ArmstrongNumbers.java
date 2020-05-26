@@ -1,11 +1,10 @@
 class ArmstrongNumbers {
 
 	boolean isArmstrongNumber(int numberToCheck) {
-		String s = String.valueOf(numberToCheck);
-		int numOfDigits = s.length();
+		int numOfDigits = (int) (Math.log10(numberToCheck) + 1);
 		int sumOfDigits = 0;
-		for (int i = 0; i < numOfDigits; i++) {
-			sumOfDigits += Math.pow(Character.getNumericValue(s.charAt(i)), numOfDigits);
+		for (int leftOver = numberToCheck; leftOver > 0; leftOver /= 10) {
+			sumOfDigits += Math.pow(leftOver % 10, numOfDigits);
 		}
 		return numberToCheck == sumOfDigits;
 	}
