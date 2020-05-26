@@ -1,8 +1,6 @@
 #if !defined(ETL_H)
 #define ETL_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <cctype>
 #include <map>
 #include <vector>

@@ -1,8 +1,6 @@
 #if !defined(GRAINS_H)
 #define GRAINS_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <cstdint>
 
 namespace grains {

@@ -1,8 +1,6 @@
 #if !defined(TRANSCRIPTION_H)
 #define TRANSCRIPTION_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <string>
 
 namespace rna_transcription {

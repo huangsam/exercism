@@ -1,8 +1,6 @@
 #ifndef SPACE_AGE_H
 #define SPACE_AGE_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <cstdint>
 
 namespace space_age {

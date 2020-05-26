@@ -1,8 +1,6 @@
 #if !defined(PROTEIN_TRANSLATION_H)
 #define PROTEIN_TRANSLATION_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <map>
 #include <string>
 #include <vector>

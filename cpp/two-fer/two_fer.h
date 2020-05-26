@@ -1,8 +1,6 @@
 #if !defined(TWO_FER_H)
 #define TWO_FER_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <string>
 
 namespace two_fer {

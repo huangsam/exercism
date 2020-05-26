@@ -1,8 +1,6 @@
 #if !defined(PANGRAM_H)
 #define PANGRAM_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <cctype>
 #include <string>
 
