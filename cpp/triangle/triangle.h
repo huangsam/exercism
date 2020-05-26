@@ -7,9 +7,6 @@ namespace triangle {
 
     enum flavor { equilateral, isosceles, scalene };
 
-    bool is_invalid(double a, double b, double c);
-    bool is_equilateral(double a, double b, double c);
-    bool is_isosceles(double a, double b, double c);
     flavor kind(double a, double b, double c);
 
 }  // namespace triangle
