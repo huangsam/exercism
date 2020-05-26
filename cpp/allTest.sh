@@ -13,7 +13,7 @@ for item in *; do
         continue
     fi
     pushd "$item"
-    cmake .
+    cmake . -D EXERCISM_RUN_ALL_TESTS=true
     make
     popd
 done
