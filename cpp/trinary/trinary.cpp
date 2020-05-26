@@ -1,6 +1,5 @@
 #include "trinary.h"
 #include <cmath>
-#include <cstdlib>
 
 namespace trinary {
 
