@@ -5,7 +5,7 @@ namespace collatz_conjecture {
 
     int steps(int n) {
         if (n < 1) {
-            throw std::domain_error("invalid n");
+            throw std::domain_error("invalid integer");
         }
         int count = 0;
         while (n != 1) {
