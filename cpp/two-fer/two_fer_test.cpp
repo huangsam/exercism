@@ -11,6 +11,7 @@ TEST_CASE("no_name_given")
     REQUIRE(actual == expected);
 }
 
+#if defined(EXERCISM_RUN_ALL_TESTS)
 TEST_CASE("a_name_given")
 {
     const std::string name = "Alice";
@@ -26,3 +27,4 @@ TEST_CASE("another_name_given")
     const std::string expected = "One for Bob, one for me.";
     REQUIRE(actual == expected);
 }
+#endif
