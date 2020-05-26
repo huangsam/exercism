@@ -48,4 +48,4 @@ TEST_CASE("seven_digit_number_that_is_not_an_armstrong_number")
 {
     REQUIRE_FALSE(armstrong_numbers::is_armstrong_number(9926314));
 }
-#endif
+#endif // !EXERCISM_RUN_ALL_TESTS

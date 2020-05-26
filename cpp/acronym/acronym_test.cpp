@@ -57,4 +57,5 @@ TEST_CASE("hyphenated")
 
     REQUIRE(expected == actual);
 }
+
 #endif

@@ -111,4 +111,5 @@ TEST_CASE("ten_rows")
 
     REQUIRE(expected == actual);
 }
+
 #endif

@@ -6,7 +6,7 @@ TEST_CASE("sentence_empty")
     REQUIRE(!pangram::is_pangram(""));
 }
 
-#if defined(EXERCISM_RUN_ALL_TESTS)
+#ifdef EXERCISM_RUN_ALL_TESTS
 TEST_CASE("pangram_with_only_lower_case")
 {
     REQUIRE(pangram::is_pangram("the quick brown fox jumps over the lazy dog"));
