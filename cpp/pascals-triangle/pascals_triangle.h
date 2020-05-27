@@ -9,7 +9,7 @@ namespace pascals_triangle {
     typedef std::vector<std::vector<int>> triangle;
     typedef std::vector<int> triangle_row;
 
-    triangle generate_rows(int rows);
+    const triangle generate_rows(int rows);
 
 }  // namespace pascals_triangle
 
