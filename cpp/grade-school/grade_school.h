@@ -15,8 +15,8 @@ namespace grade_school {
         rostermap r;
     public:
         void add(const std::string &name, int grade);
-        rostermap roster() const;
-        rosterclass grade(int grade) const;
+        const rostermap roster() const;
+        const rosterclass grade(int grade) const;
     };
 
 }  // namespace grade_school

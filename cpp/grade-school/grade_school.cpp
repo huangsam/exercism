@@ -9,11 +9,11 @@ namespace grade_school {
         names.insert(it, name);
     }
 
-    rostermap school::roster() const {
+    const rostermap school::roster() const {
         return r;
     }
 
-    rosterclass school::grade(int grade) const {
+    const rosterclass school::grade(int grade) const {
         return r.count(grade) ? r.at(grade) : rosterclass{};
     }
 
