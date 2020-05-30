@@ -5,6 +5,9 @@ for item in *; do
         continue
     fi
     pushd "$item"
-    npm install && npm test
+    if [[ ! -d node_modules ]]; then
+        npm install
+    fi
+    npm test
     popd
 done
