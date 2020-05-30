@@ -11,6 +11,10 @@ for item in *; do
         continue
     fi
     pushd "$item"
-    cp "$TEMPLATE_DIR/"* .
+    for template_item in "$TEMPLATE_DIR/"*; do
+        if [[ -f $template_item ]]; then
+            cp "$template_item" .
+        fi
+    done
     popd
 done

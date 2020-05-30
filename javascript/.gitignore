@@ -5,3 +5,4 @@ babel.config.js
 package.json
 package-lock.json
 !.bootstrap/**
+.bootstrap/node_modules/
