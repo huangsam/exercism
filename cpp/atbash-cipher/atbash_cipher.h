@@ -1,8 +1,6 @@
 #if !defined(ATBASH_CIPHER_H)
 #define ATBASH_CIPHER_H
 
-#define EXERCISM_RUN_ALL_TESTS
-
 #include <string>
 
 namespace atbash_cipher {
