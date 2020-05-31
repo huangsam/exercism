@@ -6,6 +6,7 @@
 #include <string>
 
 namespace atbash_cipher {
+
     constexpr int CIPHER_SEQ_SIZE = 5;
 
     const std::string encode(const std::string &input);
