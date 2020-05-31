@@ -8,5 +8,6 @@ const COLORS = [
 ];
 
 export const decodedValue = (resistors) => {
-  return colorCode(resistors[0]) * 10 + colorCode(resistors[1]);
+  const [first, second, ...rest] = resistors
+  return colorCode(first) * 10 + colorCode(second);
 };
