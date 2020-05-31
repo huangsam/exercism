@@ -2,8 +2,8 @@
 #define MATCHING_BRACKETS_H
 
 #include <map>
-#include <string>
 #include <set>
+#include <string>
 
 namespace matching_brackets {
 
