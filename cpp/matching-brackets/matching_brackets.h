@@ -7,7 +7,7 @@
 
 namespace matching_brackets {
 
-    constexpr char MATCH_BAD = '?';
+    constexpr char MATCH_BAD = '\0';
     const std::set<char> OPEN{'{', '[', '('};
     const std::map<char, char> MATCHES{
         {'{', '}'},
