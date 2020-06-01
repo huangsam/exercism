@@ -1,5 +1,5 @@
 export const isPangram = (sentence) => {
-  let chars = Array.from({ length: 26 }).fill(0);
+  let chars = Array(26).fill(0);
   for (const ch of sentence.toLowerCase()) {
     if (ch < 'a' || ch > 'z') {
         continue;
