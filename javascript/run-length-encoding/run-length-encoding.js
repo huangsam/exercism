@@ -7,13 +7,13 @@ export const encode = (plaintext) => {
       continue;
     }
     if (ch != current) {
-      stack.push(freq > 1 ? `${freq}${current}` : current);
+      stack.push(freq > 1 ? `${freq + current}` : current);
       [freq, current] = [1, ch];
     } else {
       freq++;
     }
   }
-  stack.push(freq > 1 ? `${freq}${current}` : current);
+  stack.push(freq > 1 ? `${freq + current}` : current);
   return stack.join('');
 };
 
