@@ -1,7 +1,3 @@
-const repr = ([freq, char] = tup) => {
-  return freq > 1 ? `${freq}${char}` : char;
-}
-
 export const encode = (plaintext) => {
   let stack = [];
   let [freq, current] = [1, undefined];
@@ -11,14 +7,14 @@ export const encode = (plaintext) => {
       continue;
     }
     if (ch != current) {
-      stack.push([freq, current]);
+      stack.push(freq > 1 ? `${freq}${current}` : current);
       [freq, current] = [1, ch];
     } else {
       freq++;
     }
   }
-  stack.push([freq, current]);
-  return stack.map(repr).join('');
+  stack.push(freq > 1 ? `${freq}${current}` : current);
+  return stack.join('');
 };
 
 export const decode = (ciphertext) => {
