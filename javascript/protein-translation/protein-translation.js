@@ -1,4 +1,4 @@
-const CODONMAP = {
+const CODON_MAP = {
   'AUG': 'Methionine',
   'UUU': 'Phenylalanine',
   'UUC': 'Phenylalanine',
@@ -18,13 +18,13 @@ const CODONMAP = {
   'UGA': '',
 };
 
-const CODONSIZE = 3;
+const CODON_SIZE = 3;
 
 export const translate = (rna = '') => {
   let result = [];
-  for (let i = 0; i < rna.length; i += CODONSIZE) {
-    const codon = rna.substring(i, i + CODONSIZE);
-    const protein = CODONMAP[codon];
+  for (let i = 0; i < rna.length; i += CODON_SIZE) {
+    const codon = rna.substring(i, i + CODON_SIZE);
+    const protein = CODON_MAP[codon];
     if (protein === '') {
       return result;
     } else if (protein === undefined) {
