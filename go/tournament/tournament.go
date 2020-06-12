@@ -100,9 +100,9 @@ func Tally(input io.Reader, output io.Writer) error {
 		records = append(records, *record)
 	}
 	sort.Sort(records)
-	fmt.Fprintf(output, header())
+	fmt.Fprint(output, header())
 	for _, record := range records {
-		fmt.Fprintf(output, record.row())
+		fmt.Fprint(output, record.row())
 	}
 	return nil
 }
