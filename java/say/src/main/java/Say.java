@@ -64,38 +64,28 @@ public class Say {
         if (number < 1000L) {
             long factor = number / 100L;
             long remainder = number % 100L;
-            if (remainder > 0) {
+            if (remainder > 0L) {
                 return String.format("%s hundred %s", known.get(factor), say(remainder));
             } else {
                 return String.format("%s hundred", known.get(factor));
             }
         }
 
-        // Store three digit groups from low to high
-        LinkedList<Long> digitGroups = new LinkedList<>();
-        long digitsLeft = number;
-        while (digitsLeft > 0L) {
-            digitGroups.push(digitsLeft % 1000L);
-            digitsLeft /= 1000L;
-        }
-
-        // Process three digit groups from high to low
+        // Handle 10^3 through 10^12 - 1
         LinkedList<String> results = new LinkedList<>();
-        while (digitGroups.size() > 0) {
-            long digits = digitGroups.pop();
-            int power = digitGroups.size();
-            if (power > 0) { // Handle powers of 1000
-                if (digits > 0L) {
-                    long base = (long) Math.pow(1000, power);
-                    String result = String.format("%s %s", say(digits), known.get(base));
-                    results.add(result);
-                }
-            } else { // Handle 1 through 999
-                if (digits > 0L) {
-                    results.add(say(digits));
-                }
+        long power = 0L;
+        while (number > 0L) {
+            long digits = number % 1000L;
+            if (power > 0L && digits > 0L) {
+                long base = (long) Math.pow(1000L, power);
+                String result = String.format("%s %s", say(digits), known.get(base));
+                results.push(result);
+            } else if (power == 0L && digits > 0L) {
+                results.push(say(digits));
             }
-        }
+            number /= 1000L;
+            power += 1L;
+        } // while handling 3-digit groups from low to high
 
         return String.join(" ", results);
     }
