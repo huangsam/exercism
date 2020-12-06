@@ -71,7 +71,7 @@ public class Say {
             }
         }
 
-        // Store three digit groups from lowest to highest
+        // Store three digit groups from low to high
         LinkedList<Long> digitGroups = new LinkedList<>();
         long digitsLeft = number;
         while (digitsLeft > 0L) {
@@ -79,7 +79,7 @@ public class Say {
             digitsLeft /= 1000L;
         }
 
-        // Process three digit groups
+        // Process three digit groups from high to low
         LinkedList<String> results = new LinkedList<>();
         while (digitGroups.size() > 0) {
             long digits = digitGroups.pop();
