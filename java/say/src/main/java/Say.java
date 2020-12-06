@@ -79,9 +79,9 @@ public class Say {
             if (power > 0L && digits > 0L) {
                 long base = (long) Math.pow(1000L, power);
                 String result = String.format("%s %s", say(digits), known.get(base));
-                results.push(result);
+                results.addFirst(result);
             } else if (power == 0L && digits > 0L) {
-                results.push(say(digits));
+                results.addFirst(say(digits));
             }
             number /= 1000L;
             power += 1L;
