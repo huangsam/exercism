@@ -5,7 +5,9 @@ import static java.util.Map.entry;
 
 public class Say {
 
-    private final Map<Long, String> known = Map.ofEntries(
+    private static final long SAY_MIN = 0L;
+    private static final long SAY_MAX = 1_000_000_000_000L - 1L;
+    private static final Map<Long, String> KNOWN = Map.ofEntries(
             entry(0L, "zero"),
             entry(1L, "one"),
             entry(2L, "two"),
@@ -41,30 +43,30 @@ public class Say {
 
     public String say(long number) throws IllegalArgumentException {
         // Handle invalid numbers
-        if (number <= -1L) {
+        if (number < SAY_MIN) {
             throw new IllegalArgumentException(String.format("%d is too small", number));
-        } else if (number >= 1_000_000_000_000L) {
+        } else if (number > SAY_MAX) {
             throw new IllegalArgumentException(String.format("%d is too large", number));
         }
 
         // Handle 0 through 999
         if (number < 20L) {
-            return known.get(number);
+            return KNOWN.get(number);
         } else if (number < 100L) {
             long factor = number / 10L;
             long remainder = number % 10L;
             if (remainder > 0L) {
-                return String.format("%s-%s", known.get(factor * 10L), known.get(remainder));
+                return String.format("%s-%s", KNOWN.get(factor * 10L), KNOWN.get(remainder));
             } else {
-                return known.get(factor * 10L);
+                return KNOWN.get(factor * 10L);
             }
         } else if (number < 1000L) {
             long factor = number / 100L;
             long remainder = number % 100L;
             if (remainder > 0L) {
-                return String.format("%s hundred %s", known.get(factor), say(remainder));
+                return String.format("%s hundred %s", KNOWN.get(factor), say(remainder));
             } else {
-                return String.format("%s hundred", known.get(factor));
+                return String.format("%s hundred", KNOWN.get(factor));
             }
         }
 
@@ -75,7 +77,7 @@ public class Say {
             long digits = number % 1000L;
             if (power > 0L && digits > 0L) {
                 long base = (long) Math.pow(1000L, power);
-                String result = String.format("%s %s", say(digits), known.get(base));
+                String result = String.format("%s %s", say(digits), KNOWN.get(base));
                 results.addFirst(result);
             } else if (power == 0L && digits > 0L) {
                 results.addFirst(say(digits));
