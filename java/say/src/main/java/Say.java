@@ -47,7 +47,7 @@ public class Say {
             throw new IllegalArgumentException(String.format("%d is too large", number));
         }
 
-        // Handle 0 through 99
+        // Handle 0 through 999
         if (number < 20L) {
             return known.get(number);
         } else if (number < 100L) {
@@ -58,10 +58,7 @@ public class Say {
             } else {
                 return known.get(factor * 10L);
             }
-        }
-
-        // Handle 100 through 999
-        if (number < 1000L) {
+        } else if (number < 1000L) {
             long factor = number / 100L;
             long remainder = number % 100L;
             if (remainder > 0L) {
@@ -71,7 +68,7 @@ public class Say {
             }
         }
 
-        // Handle 10^3 through 10^12 - 1
+        // Handle groups of 10^3
         LinkedList<String> results = new LinkedList<>();
         long power = 0L;
         while (number > 0L) {
@@ -85,7 +82,7 @@ public class Say {
             }
             number /= 1000L;
             power += 1L;
-        } // while handling 3-digit groups from low to high
+        }
 
         return String.join(" ", results);
     }
