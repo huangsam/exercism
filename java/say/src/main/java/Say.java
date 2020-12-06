@@ -1,43 +1,43 @@
-import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
+
+import static java.util.Map.entry;
 
 public class Say {
 
-    private final HashMap<Long, String> known = new HashMap<>();
-
-    public Say() {
-        known.put(0L, "zero");
-        known.put(1L, "one");
-        known.put(2L, "two");
-        known.put(3L, "three");
-        known.put(4L, "four");
-        known.put(5L, "five");
-        known.put(6L, "six");
-        known.put(7L, "seven");
-        known.put(8L, "eight");
-        known.put(9L, "nine");
-        known.put(10L, "ten");
-        known.put(11L, "eleven");
-        known.put(12L, "twelve");
-        known.put(13L, "thirteen");
-        known.put(14L, "fourteen");
-        known.put(15L, "fifteen");
-        known.put(16L, "sixteen");
-        known.put(17L, "seventeen");
-        known.put(18L, "eighteen");
-        known.put(19L, "nineteen");
-        known.put(20L, "twenty");
-        known.put(30L, "thirty");
-        known.put(40L, "forty");
-        known.put(50L, "fifty");
-        known.put(60L, "sixty");
-        known.put(70L, "seventy");
-        known.put(80L, "eighty");
-        known.put(90L, "ninety");
-        known.put(1000L, "thousand");
-        known.put(1000000L, "million");
-        known.put(1000000000L, "billion");
-    }
+    private final Map<Long, String> known = Map.ofEntries(
+            entry(0L, "zero"),
+            entry(1L, "one"),
+            entry(2L, "two"),
+            entry(3L, "three"),
+            entry(4L, "four"),
+            entry(5L, "five"),
+            entry(6L, "six"),
+            entry(7L, "seven"),
+            entry(8L, "eight"),
+            entry(9L, "nine"),
+            entry(10L, "ten"),
+            entry(11L, "eleven"),
+            entry(12L, "twelve"),
+            entry(13L, "thirteen"),
+            entry(14L, "fourteen"),
+            entry(15L, "fifteen"),
+            entry(16L, "sixteen"),
+            entry(17L, "seventeen"),
+            entry(18L, "eighteen"),
+            entry(19L, "nineteen"),
+            entry(20L, "twenty"),
+            entry(30L, "thirty"),
+            entry(40L, "forty"),
+            entry(50L, "fifty"),
+            entry(60L, "sixty"),
+            entry(70L, "seventy"),
+            entry(80L, "eighty"),
+            entry(90L, "ninety"),
+            entry(1000L, "thousand"),
+            entry(1000000L, "million"),
+            entry(1000000000L, "billion")
+    );
 
     public String say(long number) throws IllegalArgumentException {
         // Handle invalid numbers
