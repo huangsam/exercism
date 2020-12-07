@@ -1,6 +1,6 @@
 class MicroBlog {
 
-    private static final int MAX_CHARACTERS = 5;
+    private static final long MAX_CHARACTERS = 5L;
 
     public String truncate(String input) {
         return input.codePoints()
