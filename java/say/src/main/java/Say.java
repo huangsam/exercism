@@ -6,7 +6,7 @@ import static java.util.Map.entry;
 public class Say {
 
     private static final long SAY_MIN = 0L;
-    private static final long SAY_MAX = 1_000_000_000_000L - 1L;
+    private static final long SAY_MAX = 999_999_999_999L;
     private static final Map<Long, String> KNOWN = Map.ofEntries(
             entry(0L, "zero"),
             entry(1L, "one"),
