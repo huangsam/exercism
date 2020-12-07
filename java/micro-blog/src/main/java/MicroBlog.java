@@ -7,7 +7,7 @@ class MicroBlog {
                 .limit(MAX_CHARACTERS) // shorten codePoints stream
                 .collect(
                         StringBuilder::new, // supply constructor
-                        StringBuilder::appendCodePoint, // create partial results
+                        StringBuilder::appendCodePoint, // build partial results
                         StringBuilder::append // combine partial results
                 ).toString();
     }
