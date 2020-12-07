@@ -4,11 +4,11 @@ namespace etl {
 
     newmap transform(const oldmap &old) {
         newmap result;
-        for (const auto &it : old) {
-            const auto points = it.first;
-            const auto chars = it.second;
-            for (const auto &sit : chars) {
-                result[tolower(sit)] = points;
+        for (const auto &mit : old) {
+            const auto points = mit.first;
+            const auto chars = mit.second;
+            for (const auto &vit : chars) {
+                result[tolower(vit)] = points;
             }
         }
         return result;
