@@ -36,9 +36,9 @@ public class Say {
             entry(70L, "seventy"),
             entry(80L, "eighty"),
             entry(90L, "ninety"),
-            entry(1000L, "thousand"),
-            entry(1000000L, "million"),
-            entry(1000000000L, "billion")
+            entry(1_000L, "thousand"),
+            entry(1_000_000L, "million"),
+            entry(1_000_000_000L, "billion")
     );
 
     public String say(long number) throws IllegalArgumentException {
@@ -60,7 +60,7 @@ public class Say {
             } else {
                 return KNOWN.get(factor * 10L);
             }
-        } else if (number < 1000L) {
+        } else if (number < 1_000L) {
             long factor = number / 100L;
             long remainder = number % 100L;
             if (remainder > 0L) {
@@ -74,15 +74,15 @@ public class Say {
         LinkedList<String> results = new LinkedList<>();
         long power = 0L;
         while (number > 0L) {
-            long digits = number % 1000L;
+            long digits = number % 1_000L;
             if (power > 0L && digits > 0L) {
-                long base = (long) Math.pow(1000L, power);
+                long base = (long) Math.pow(1_000L, power);
                 String result = String.format("%s %s", say(digits), KNOWN.get(base));
                 results.addFirst(result);
             } else if (power == 0L && digits > 0L) {
                 results.addFirst(say(digits));
             }
-            number /= 1000L;
+            number /= 1_000L;
             power += 1L;
         }
 
