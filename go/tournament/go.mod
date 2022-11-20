@@ -1,3 +1,3 @@
-module tournament
+module exercism.io/tournament
 
-go 1.13
+go 1.19
