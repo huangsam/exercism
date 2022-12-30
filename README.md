@@ -8,3 +8,4 @@ The following languages tracks have been attempted:
 - [Golang](https://golang.org/)
 - [Java](https://openjdk.java.net/)
 - [JavaScript](https://www.javascript.com/)
+- [Rust](https://www.rust-lang.org/)
