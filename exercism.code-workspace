@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "cpp"
+		},
+		{
+			"path": "go"
+		},
+		{
+			"path": "java"
+		},
+		{
+			"path": "javascript"
+		},
+		{
+			"path": "rust"
+		}
+	],
+	"settings": {}
+}
