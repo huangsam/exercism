@@ -1,6 +1,3 @@
-import java.util.*;
-import java.util.stream.Stream;
-
 class Matrix {
 
     private String matrixAsString;
@@ -35,7 +32,6 @@ class Matrix {
     }
 
     int getColumnsCount() {
-        int count = 0;
         String firstRow = matrixAsString.split("\n")[0];
         String[] columns = firstRow.split(" ");
         return columns.length;
