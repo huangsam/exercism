@@ -71,8 +71,8 @@ public class DoublyLinkedList<T> {
 class ListNode<T> {
 
     private T value;
-    private ListNode next = null;
-    private ListNode prev = null;
+    private ListNode<T> next = null;
+    private ListNode<T> prev = null;
 
     ListNode(T item) {
         value = item;
@@ -82,19 +82,19 @@ class ListNode<T> {
         return value;
     }
 
-    public ListNode getNext() {
+    public ListNode<T> getNext() {
         return next;
     }
 
-    public void setNext(ListNode n) {
+    public void setNext(ListNode<T> n) {
         next = n;
     }
 
-    public ListNode getPrev() {
+    public ListNode<T> getPrev() {
         return prev;
     }
 
-    public void setPrev(ListNode p) {
+    public void setPrev(ListNode<T> p) {
         prev = p;
     }
 
