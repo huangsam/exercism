@@ -1,2 +1,5 @@
 [*.go]
 indent_style = tab
+
+[*.{mod,work}]
+indent_style = tab
