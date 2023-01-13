@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 public class SayTest {
 
     private Say say = new Say();
-    
+
     @Test
     public void zero() {
         assertEquals("zero", say.say(0));
@@ -55,12 +55,12 @@ public class SayTest {
     public void oneMillion() {
         assertEquals("one million", say.say(1_000_000));
     }
-    
+
     @Test
     public void oneMillionTwoThousandThreeHundredFortyFive() {
         assertEquals("one million two thousand three hundred forty-five", say.say(1_002_345));
     }
-    
+
     @Test
     public void oneBillion() {
         assertEquals("one billion", say.say(1_000_000_000));
@@ -80,5 +80,5 @@ public class SayTest {
     @Test(expected = IllegalArgumentException.class)
     public void illegalTooBigNumber() {
         say.say(1_000_000_000_000L);
-    }    
+    }
 }

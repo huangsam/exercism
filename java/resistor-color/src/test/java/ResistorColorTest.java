@@ -43,5 +43,5 @@ public class ResistorColorTest {
 
         assertArrayEquals(expected, resistorColor.colors());
     }
-    
+
 }

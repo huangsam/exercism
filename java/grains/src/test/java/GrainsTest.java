@@ -13,14 +13,14 @@ public class GrainsTest {
 
     @Rule
     public ExpectedException expectedException = ExpectedException.none();
-    
+
     private Grains grains;
-    
+
     @Before
     public void setup() {
         grains = new Grains();
     }
-    
+
     @Test
     public void countAtSquare1() {
         BigInteger result = grains.grainsOnSquare(1);
