@@ -1,4 +1,4 @@
-// +build detailed
+//go:build detailed
 
 package protein
 
